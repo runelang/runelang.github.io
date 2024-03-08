@@ -2,11 +2,11 @@
 window.$docsify = {
   name: "RuneLang Documentation",
   logo: "../assets/images/logo_white.svg",
-  coverpage: true,
+  coverpage: "../_coverpage.md",
   autoHeader: true,
   auto2top: true,
-  loadSidebar: true,
-  loadNavbar: true,
+  loadSidebar: "../_sidebar.md",
+  loadNavbar: "../_navbar.md",
   maxLevel: 3,
   subMaxLevel: 3,
   tabs: {
