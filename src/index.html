@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta name="description" content="" />
+    <title>RuneLang Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-defaults.css"
+    />
+    <link rel="stylesheet" href="./assets/runelang.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Docsify Configuration
+      window.$docsify = {
+        name: "RuneLang Documentation",
+        logo: "../assets/images/logo_white.svg",
+        basePath: "/pages",
+        coverpage: "../structure/_cover.md",
+        autoHeader: true,
+        auto2top: true,
+        loadSidebar: "../structure/_sidebar.md",
+        loadNavbar: "../structure/_navbar.md",
+        maxLevel: 3,
+        subMaxLevel: 3,
+        tabs: {
+          persist: true,
+          sync: true,
+          theme: "classic",
+          tabComments: true,
+          tabHeadings: true,
+        },
+        executeScript: true,
+        onlyCover: true,
+        plugins: [
+          // Restores initial <title>
+          function persistTitle(hook, vm) {
+            var titleElm = document.querySelector("title");
+            var rootTitle = titleElm && titleElm.textContent;
+            var pageTitlePrefix = window.$docsify.name
+              ? window.$docsify.name + " - "
+              : "";
+
+            if (rootTitle) {
+              hook.doneEach(function () {
+                var currentTitle = titleElm.textContent;
+                var isRoot = !/\/[a-z]/.test(location.hash);
+                var newTitle = isRoot
+                  ? rootTitle
+                  : pageTitlePrefix + currentTitle;
+
+                titleElm.textContent = newTitle;
+              });
+            }
+          },
+        ],
+      };
+    </script>
+
+    <!-- Required -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
+
+    <!-- Recommended -->
+    <script src="./assets/scripts/runelang.prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  </body>
+</html>

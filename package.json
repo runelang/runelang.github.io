@@ -1,0 +1,14 @@
+{
+  "name": "runelang-docs",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "parcel ./src/index.html --open",
+    "build": "parcel build ./src/index.html --dist-dir build"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

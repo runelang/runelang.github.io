@@ -1,0 +1,193 @@
+/** Custom Font Imports */
+@import url(https://fonts.googleapis.com/css?family=Otomanopee%20One);
+
+/** Aliasing **/
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/** RuneLang Themeing */
+
+:root {
+  /** Force Dark mode*/
+  color-scheme: only dark;
+
+  /** Color Palette */
+  --russian-violet: hsla(259, 48%, 26%, 1);
+  --space-cadet: hsla(221, 70%, 20%, 1);
+  --dark-purple: hsla(289, 45%, 12%, 1);
+  --blue-gray: hsla(209, 53%, 59%, 1);
+  --oxford-blue: hsla(217, 71%, 16%, 1);
+  --jasper: hsla(13, 49%, 50%, 1);
+  --davys-gray: hsla(135, 2%, 36%, 1);
+  --royal-blue-traditional: hsla(224, 68%, 24%, 1);
+  --earth-yellow: hsla(35, 100%, 71%, 1);
+  --oxford-blue-2: hsla(228, 62%, 12%, 1);
+
+  /** Enchanted Palette */
+  --enchanted-forest: hsla(79, 100%, 36%, 1);
+  --dragons-breath: hsla(16, 100%, 50%, 1);
+  --alchemist-gold: hsla(54, 77%, 75%, 1);
+  --mystic-amethyst: hsla(300, 47%, 75%, 1);
+  --runestone-blue: hsla(225, 73%, 57%, 1);
+
+  /** Base */
+  --base-color: var(--mono-tint1);
+  --base-background-color: var(--oxford-blue);
+  --base-font-family: "Otomanopee One", sans-serif;
+  --base-transparent-dark: rgba(43, 43, 43, 0.7);
+
+  /** Theme */
+  --theme-color: var(--earth-yellow);
+
+  /** Utility */
+  --border-radius-l: 15px;
+  --border-radius-m: 10px;
+  --border-radius-s: 5px;
+
+  --strong-font-weight: 400;
+
+  /** Cover */
+  --cover-color: var(--mono-tint1);
+  --cover-background-image: radial-gradient(
+    circle at 50% -50%,
+    var(--jasper),
+    var(--dark-purple) 50%,
+    var(--oxford-blue) 80%
+  );
+  --cover-background-blend-mode: normal;
+  --cover-background-mask-color: transparent;
+  --cover-background-mask-opacity: 1;
+  --cover-border-width: 0 0 2px 0;
+  --cover-border-color: var(--royal-blue-traditional);
+
+  --cover-button-primary-color: var(--jasper);
+
+  /** Navbar */
+  --navbar-root-color: var(--earth-yellow);
+
+  --navbar-menu-background: var(--earth-yellow);
+  --navbar-menu-link-color: var(--jasper);
+
+  /** Sidebar */
+  --sidebar-width: 19rem;
+
+  --sidebar-background: var(--space-cadet);
+
+  --sidebar-border-width: 0 2px 0 0;
+  --sidebar-border-color: var(--royal-blue-traditional);
+
+  --sidebar-toggle-background: var(--space-cadet);
+  --sidebar-toggle-border-width: 2px 2px 2px 0;
+  --sidebar-toggle-border-color: var(--royal-blue-traditional);
+  --sidebar-toggle-border-radius: 0 var(--border-radius-s)
+    var(--border-radius-s) 0;
+
+  /** Blockquote **/
+  --blockquote-background: var(--mystic-amethyst);
+  --blockquote-border-width: 3px;
+  --blockquote-color: var(--base-transparent-dark);
+
+  /** Notice */
+  --notice-important-background: var(--base-transparent-dark);
+  --notice-important-color: var(--alchemist-gold);
+  --notice-important-border-width: 3px;
+
+  --notice-tip-background: var(--base-transparent-dark);
+  --notice-tip-color: var(--enchanted-forest);
+  --notice-tip-border-width: 3px;
+
+  /** Code */
+  --code-block-border-radius: var(--border-radius-m);
+
+  --code-theme-background: var(--oxford-blue-2);
+  --code-theme-border-width: 2px;
+
+  --code-theme-comment: #7c7c7c;
+  --code-theme-function: #dcdcaa;
+  --code-theme-keyword: #569cd6;
+  --code-theme-operator: #9cdcfe;
+  --code-theme-punctuation: #d4d4d4;
+  --code-theme-selection: #264f78;
+  --code-theme-selector: #d16969;
+  --code-theme-tag: #4ec9b0;
+  --code-theme-text: #d4d4d4;
+  --code-theme-variable: #9cdcfe;
+
+  /** Copy Code */
+  --copycode-background: var(--blue-gray);
+  --copycode-color: var(--royal-blue-traditional);
+
+  /** Tables */
+  --table-body-border-width: 2px;
+  --table-body-border-color: var(--blue-gray);
+  --table-head-border-width: 2px;
+  --table-head-border-color: var(--blue-gray);
+  --table-cell-border-width: 2px;
+  --table-cell-border-color: var(--blue-gray);
+
+  --table-head-background: var(--royal-blue-traditional);
+
+  --table-row-even-background: var(--space-cadet);
+  --table-row-odd-background: var(--space-cadet);
+
+  /** Tabs */
+  --docsifytabs-tab-color--active: var(--mono-tint3);
+  --docsifytabs-tab-background--active: var(--space-cadet);
+
+  --docsifytabs-border-color: var(--royal-blue-traditional);
+  --docsifytabs-border-radius-px: var(--border-radius-s);
+  --docsifytabs-border-px: 2px;
+
+  --docsifytabs-tab-background: var(--oxford-blue-2);
+  --docsifytabs-tab-color: var(--mono-tint1);
+  --docsifytabs-tab-highlight-px: 0;
+
+  --docsifytabs-content-background: var(--space-cadet);
+
+  /** Headings */
+  --heading-color: var(--mono-tint3);
+  --heading-font-weight: 400;
+}
+
+/** Workaround for injecting list-style-t into content */
+.markdown-section ul {
+  list-style-image: url(./images/list_star.png);
+}
+
+/** Workaround for changing navbar section header */
+.sidebar-nav ul p {
+  margin-bottom: 0;
+}
+
+/** Workaround for changing navbar section children */
+.sidebar-nav li > a,
+.sidebar-nav li > a {
+  font-size: 14px;
+  color: var(--mono-tint3);
+}
+
+/** Scrollbars */
+
+* ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+* ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+* ::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
