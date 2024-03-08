@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "parcel ./src/index.html --open",
-    "build": "parcel build ./src/index.html --dist-dir build"
+    "start": "parcel ./docs/index.html --open",
+    "build": "parcel build ./docs/index.html --dist-dir build"
   },
   "keywords": [],
   "devDependencies": {
