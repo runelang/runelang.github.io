@@ -18,67 +18,15 @@
   <body>
     <div id="app"></div>
 
-    <script>
-      // Docsify Configuration
-      window.$docsify = {
-        name: "RuneLang Documentation",
-        logo: "../assets/images/logo_white.svg",
-        basePath: "/pages",
-        coverpage: "../structure/_cover.md",
-        autoHeader: true,
-        auto2top: true,
-        loadSidebar: "../structure/_sidebar.md",
-        loadNavbar: "../structure/_navbar.md",
-        maxLevel: 3,
-        subMaxLevel: 3,
-        tabs: {
-          persist: true,
-          sync: true,
-          theme: "classic",
-          tabComments: true,
-          tabHeadings: true,
-        },
-        executeScript: true,
-        onlyCover: true,
-        plugins: [
-          // Restores initial <title>
-          function persistTitle(hook, vm) {
-            var titleElm = document.querySelector("title");
-            var rootTitle = titleElm && titleElm.textContent;
-            var pageTitlePrefix = window.$docsify.name
-              ? window.$docsify.name + " - "
-              : "";
-
-            if (rootTitle) {
-              hook.doneEach(function () {
-                var currentTitle = titleElm.textContent;
-                var isRoot = !/\/[a-z]/.test(location.hash);
-                var newTitle = isRoot
-                  ? rootTitle
-                  : pageTitlePrefix + currentTitle;
-
-                titleElm.textContent = newTitle;
-              });
-            }
-          },
-        ],
-      };
-    </script>
-
-    <!-- Required -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
-
-    <!-- Recommended -->
-    <script src="./assets/scripts/runelang.prism.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="./assets/scripts/pkg/docsify.js"></script>
+    <script src="./assets/scripts/pkg/docsify-themeable.js"></script>
+    <script src="./assets/scripts/docsify.config.js"></script>
+    <script src="./assets/scripts/pkg/docsify-footer.js"></script>
+    <script src="./assets/scripts/pkg/docsify-copy-code.js"></script>
+    <script src="./assets/scripts/pkg/docsify-tabs.js"></script>
+    <script src="./assets/scripts/pkg/search.js"></script>
+    <script src="./assets/scripts/pkg/zoom-image.js"></script>
+    <script src="./assets/scripts/pkg/docsify-pagination.js"></script>
+    <script src="./assets/scripts/pkg/emoji.js"></script>
   </body>
 </html>

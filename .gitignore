@@ -10,6 +10,7 @@ node_modules/
 # Parcel-generated files
 .cache/
 build/
+dist/
 .parcel-cache/
 
 # Environment files
